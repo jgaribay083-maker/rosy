@@ -85,7 +85,7 @@ section{position:relative}
   backdrop-filter:blur(8px);
 }
 .topbar .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream)}
-.topbar .brand img{height:44px;width:auto;filter:drop-shadow(0 0 10px rgba(212,175,55,.35))}
+.topbar .brand img{height:46px;width:auto;max-width:62vw;object-fit:contain;mix-blend-mode:lighten;filter:drop-shadow(0 0 10px rgba(212,175,55,.35))}
 .topbar .brand strong{font-family:'Playfair Display',serif;font-size:17px;letter-spacing:.04em;color:var(--gold-light)}
 .topbar .brand small{display:block;font-size:9px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
 .topbar .call{
@@ -379,8 +379,7 @@ footer b{color:var(--gold)}
 
 <header class="topbar">
   <a class="brand" href="#top">
-    <img src="logo.png" alt="Xtreme Motors Exchange">
-    <span><strong>Xtreme Motors Exchange</strong><small>Used Motor Vehicles Dealer · Phoenix, AZ</small></span>
+    <img src="logo.png" alt="Xtreme Motors Exchange · Used Motor Vehicles Dealer · Phoenix, AZ">
   </a>
   <a class="call" href="tel:+16024703727" data-cursor="Llamar">📞 (602) 470-3727</a>
 </header>
@@ -391,7 +390,7 @@ footer b{color:var(--gold)}
   <p class="sub">¡Yo te ayudo — con o sin crédito!</p>
   <p class="who"><b>Rosy Garibay</b> · Tu Asesor Automotriz</p>
   <div class="ctas">
-    <a class="btn btn-gold magnetic" data-cursor="WhatsApp" href="https://wa.me/16024703727?text=Hola%20Rosy%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n%20para%20comprar%20un%20auto%20%F0%9F%9A%97" target="_blank" rel="noopener"><span class="wa-badge"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4.5 28l6.3-1.7c1.9 1 4 1.6 5.2 1.6h.1C22.6 27.9 28 22.6 28 16S22.6 3 16 3zm6.1 16.9c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.3.2-3.7-.8-3.1-1.3-5.1-4.4-5.3-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5s.8 2 .9 2.2c.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.7.3.8.5.1.1.1.9-.2 1.7z"/></svg></span> Mándame WhatsApp</a>
+    <a class="btn btn-gold magnetic" data-cursor="WhatsApp" href="https://wa.me/16024703727?text=Hola%20Rosy%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n%20para%20comprar%20un%20auto%20%F0%9F%9A%97" target="_blank" rel="noopener"><span class="wa-badge"><svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></span> Mándame WhatsApp</a>
     <a class="btn btn-ghost magnetic" data-cursor="Ver" href="#beneficios">Cómo te ayudo ↓</a>
   </div>
   <div class="scroll-hint">Desliza para ver más ↓</div>
@@ -445,7 +444,7 @@ footer b{color:var(--gold)}
       <a class="phone" href="tel:+16024703727" data-cursor="Llamar">(602) 470-3727</a>
       <p class="note">Lunes a sábado · 10 AM – 6 PM</p>
       <div class="ctas">
-        <a class="btn btn-gold magnetic" data-cursor="WhatsApp" href="https://wa.me/16024703727?text=Hola%20Rosy%2C%20quiero%20ver%20qu%C3%A9%20autos%20tienes%20disponibles%20%F0%9F%9A%97" target="_blank" rel="noopener"><span class="wa-badge"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4.5 28l6.3-1.7c1.9 1 4 1.6 5.2 1.6h.1C22.6 27.9 28 22.6 28 16S22.6 3 16 3zm6.1 16.9c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.3.2-3.7-.8-3.1-1.3-5.1-4.4-5.3-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5s.8 2 .9 2.2c.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.7.3.8.5.1.1.1.9-.2 1.7z"/></svg></span> WhatsApp ahora</a>
+        <a class="btn btn-gold magnetic" data-cursor="WhatsApp" href="https://wa.me/16024703727?text=Hola%20Rosy%2C%20quiero%20ver%20qu%C3%A9%20autos%20tienes%20disponibles%20%F0%9F%9A%97" target="_blank" rel="noopener"><span class="wa-badge"><svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></span> WhatsApp ahora</a>
         <a class="btn btn-ghost magnetic" data-cursor="Llamar" href="tel:+16024703727">📞 Llamar</a>
       </div>
     </div>
@@ -458,7 +457,7 @@ footer b{color:var(--gold)}
       <h2>Visítame o <em>Contáctame</em></h2>
       <p class="lead">Mándame un mensaje, llámame o ven a verme al lote — como te quede mejor. Pregunta por mí.</p>
       <a class="c-card" data-cursor="WhatsApp" href="https://wa.me/16024703727?text=Hola%20Rosy%2C%20quiero%20informaci%C3%B3n%20para%20comprar%20un%20auto%20%F0%9F%9A%97" target="_blank" rel="noopener">
-        <span class="c-ico wa"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4.5 28l6.3-1.7c1.9 1 4 1.6 5.2 1.6h.1C22.6 27.9 28 22.6 28 16S22.6 3 16 3zm6.1 16.9c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.3.2-3.7-.8-3.1-1.3-5.1-4.4-5.3-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5s.8 2 .9 2.2c.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.7.3.8.5.1.1.1.9-.2 1.7z"/></svg></span>
+        <span class="c-ico wa"><svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></span>
         <span><b>WhatsApp</b><span>Respuesta más rápida — normalmente en minutos</span></span>
       </a>
       <a class="c-card" data-cursor="Llamar" href="tel:+16024703727">
@@ -505,7 +504,7 @@ footer b{color:var(--gold)}
       </div>
       <div class="f-field"><label for="f-mensaje">Mensaje</label><textarea id="f-mensaje" name="mensaje" placeholder="ej. Busco una SUV confiable para mi familia..."></textarea></div>
       <button class="f-send magnetic" type="submit" data-cursor="Enviar">
-        <span class="wa-badge"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4.5 28l6.3-1.7c1.9 1 4 1.6 5.2 1.6h.1C22.6 27.9 28 22.6 28 16S22.6 3 16 3zm6.1 16.9c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.3.2-3.7-.8-3.1-1.3-5.1-4.4-5.3-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5s.8 2 .9 2.2c.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.7.3.8.5.1.1.1.9-.2 1.7z"/></svg></span>
+        <span class="wa-badge"><svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></span>
         Enviar por WhatsApp
       </button>
       <p class="fp-note">Se abre tu WhatsApp con el mensaje listo — solo dale enviar. Tu información nunca se comparte.</p>
@@ -518,7 +517,7 @@ footer b{color:var(--gold)}
 </footer>
 
 <a class="wa-float" data-cursor="WhatsApp" aria-label="WhatsApp" href="https://wa.me/16024703727?text=Hola%20Rosy%2C%20quiero%20informaci%C3%B3n%20para%20comprar%20un%20auto%20%F0%9F%9A%97" target="_blank" rel="noopener">
-  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4.5 28l6.3-1.7c1.9 1 4 1.6 5.2 1.6h.1C22.6 27.9 28 22.6 28 16S22.6 3 16 3zm6.1 16.9c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.3.2-3.7-.8-3.1-1.3-5.1-4.4-5.3-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5s.8 2 .9 2.2c.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.7.3.8.5.1.1.1.9-.2 1.7z"/></svg>
+  <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
 </a>
 
 <script>
@@ -544,7 +543,8 @@ footer b{color:var(--gold)}
     msg += '\n*Me interesa:* ' + v('f-interes');
     msg += '\n*Presupuesto:* ' + v('f-presupuesto');
     if(v('f-mensaje')) msg += '\n\n' + v('f-mensaje');
-    window.open('https://wa.me/16024703727?text=' + encodeURIComponent(msg), '_blank');
+    // navegación directa: window.open lo bloquean los navegadores del teléfono
+    window.location.href = 'https://wa.me/16024703727?text=' + encodeURIComponent(msg);
   });
 
   if(!fine || noMotion) return; // touch devices / reduced motion: skip cursor FX
@@ -553,7 +553,7 @@ footer b{color:var(--gold)}
   const dot = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
   const label = document.getElementById('cursorLabel');
-  let mx = innerWidth/2, my = innerHeight/2, rx = mx, ry = my;
+  let mx = innerWidth/2, my = innerHeight/2, rx = mx, ry = my, hidden = false;
 
   /* ----- gold spark trail ----- */
   const cv = document.getElementById('sparks'), ctx = cv.getContext('2d');
@@ -574,7 +574,15 @@ footer b{color:var(--gold)}
       parts.push({x:mx, y:my, vx:(Math.random()-.5)*1.4, vy:(Math.random()-.5)*1.4 - .3,
                   life:1, r:Math.random()*2.2+.8});
     }
+    if(hidden) showCursor();          // reaparece al mover dentro de la página
   });
+
+  /* ----- ocultar el cursor cuando el mouse sale de la ventana (evita el círculo congelado) ----- */
+  function hideCursor(){ hidden = true; dot.style.opacity = ring.style.opacity = '0'; ring.classList.remove('hovered'); label.textContent = ''; }
+  function showCursor(){ hidden = false; dot.style.opacity = ring.style.opacity = '1'; }
+  document.addEventListener('mouseout', e=>{ if(!e.relatedTarget) hideCursor(); }); // salió de la ventana
+  window.addEventListener('blur', hideCursor);
+  window.addEventListener('mouseover', ()=>{ if(hidden) showCursor(); });
 
   (function loop(){
     // ring follows with easing
