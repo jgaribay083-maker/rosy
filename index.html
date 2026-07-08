@@ -169,6 +169,8 @@ section{position:relative}
   mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,black,transparent);
 }
 .hero>*{position:relative;z-index:2}
+/* luces bokeh doradas de noche */
+.hero .hero-bokeh{position:absolute;inset:0;z-index:1;pointer-events:none}
 .hero h1{
   font-family:'Playfair Display',serif;font-weight:800;
   font-size:clamp(46px,9vw,104px);line-height:1.02;margin:22px 0 14px;
@@ -466,6 +468,7 @@ footer b{color:var(--gold)}
 </header>
 
 <section class="hero" id="top">
+  <canvas class="hero-bokeh" id="heroBokeh" aria-hidden="true"></canvas>
   <span class="eyebrow">Phoenix · Arizona</span>
   <h1>¿Necesitas<br>auto?</h1>
   <p class="sub">¡Yo te ayudo — con o sin crédito!</p>
@@ -645,6 +648,73 @@ footer b{color:var(--gold)}
   window.addEventListener('load', spy);
   spy();
   spyLinks.forEach(a => a.addEventListener('click', () => f1nav.classList.remove('open')));
+
+  /* ----- luces bokeh doradas en el hero (dealership de noche) ----- */
+  const bokeh = document.getElementById('heroBokeh');
+  if (bokeh){
+    const bctx = bokeh.getContext('2d');
+    const heroEl = bokeh.parentElement;
+    const TONES = [[212,175,55],[241,210,123],[245,239,224]];
+    let bw, bh, dots = [];
+
+    function bokehSize(){
+      bw = bokeh.width = heroEl.clientWidth;
+      bh = bokeh.height = heroEl.clientHeight;
+    }
+    function makeDots(){
+      dots = [];
+      const n = Math.round(Math.min(16, Math.max(9, bw/85)));
+      for(let i=0;i<n;i++){
+        // mayoría en los costados y la mitad baja, para no ensuciar el titular
+        const lado = Math.random() < .7;
+        const x = lado
+          ? (Math.random() < .5 ? Math.random()*bw*.28 : bw*.72 + Math.random()*bw*.28)
+          : Math.random()*bw;
+        const y = lado ? Math.random()*bh : bh*.5 + Math.random()*bh*.5;
+        dots.push({
+          x, y,
+          r: 26 + Math.random()*95,
+          c: TONES[(Math.random()*TONES.length)|0],
+          a: .035 + Math.random()*.085,
+          vx: (Math.random()-.5)*.09,
+          vy: -(.02 + Math.random()*.06),
+          ph: Math.random()*Math.PI*2,
+          ps: .0004 + Math.random()*.0007
+        });
+      }
+    }
+    function drawBokeh(t){
+      bctx.clearRect(0,0,bw,bh);
+      bctx.globalCompositeOperation = 'lighter';
+      for(const d of dots){
+        const pulse = .7 + .3*Math.sin(d.ph + t*d.ps);
+        const g = bctx.createRadialGradient(d.x,d.y,0,d.x,d.y,d.r);
+        g.addColorStop(0,  `rgba(${d.c[0]},${d.c[1]},${d.c[2]},${(d.a*pulse).toFixed(3)})`);
+        g.addColorStop(.72,`rgba(${d.c[0]},${d.c[1]},${d.c[2]},${(d.a*pulse*.45).toFixed(3)})`);
+        g.addColorStop(1,  'rgba(0,0,0,0)');
+        bctx.fillStyle = g;
+        bctx.beginPath(); bctx.arc(d.x,d.y,d.r,0,7); bctx.fill();
+      }
+    }
+    bokehSize(); makeDots(); drawBokeh(0);
+    addEventListener('resize', ()=>{ bokehSize(); makeDots(); drawBokeh(0); });
+
+    if(!noMotion){
+      let bokehVisible = true;
+      new IntersectionObserver(en=>{ bokehVisible = en[0].isIntersecting; }).observe(heroEl);
+      (function bokehLoop(t){
+        if(bokehVisible){
+          for(const d of dots){
+            d.x += d.vx; d.y += d.vy;
+            if(d.y < -d.r){ d.y = bh + d.r; d.x = Math.random()*bw; }
+            if(d.x < -d.r) d.x = bw + d.r; else if(d.x > bw + d.r) d.x = -d.r;
+          }
+          drawBokeh(t||0);
+        }
+        requestAnimationFrame(bokehLoop);
+      })(0);
+    }
+  }
 
   if(!fine || noMotion) return; // touch devices / reduced motion: skip cursor FX
 
